@@ -1,0 +1,69 @@
+﻿body {
+    
+}
+
+
+
+#ansarilogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+#logOut{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+#searchBtn{
+    margin-top: 20px;
+}
+
+
+
+#cartSection {
+    align-content: center; 
+}
+
+
+#amount {
+    background: #e5678f;
+    font-size: 20px;
+}
+
+.slide-right {
+    width: 100%;
+}
+
+.welcome {
+    font-size: 80px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-left: 50%;
+    transform: translateX(-200%);
+    opacity: 0;
+    animation: slide-in-anim 1.5s ease-out forwards;
+}
+
+@keyframes slide-in-anim {
+    20% {
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateX(-45%);
+    }
+
+    75% {
+        transform: translateX(-52%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}
+

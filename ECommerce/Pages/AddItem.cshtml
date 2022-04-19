@@ -1,0 +1,45 @@
+﻿@page
+@model ECommerce.Web.Pages.AddItemModel
+@{
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Register</h1>
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger">
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ProductModel.ProductId">Item Id</label>
+                    <input type="text" asp-for="ProductModel.ProductId" class="form-control" />
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ProductModel.ProductName">Item Name</label>
+                    <input type="text" asp-for="ProductModel.ProductName" class="form-control" />
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ProductModel.ProductPrice">Price</label>
+                    <input type="text" asp-for="ProductModel.ProductPrice" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Item Categories</label>
+
+                    <select name="ProductModel.CategoryId" asp-items="Model.Options" asp-for="ProductModel.CategoryId">
+                        <option value=" " selected>Select Category</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+

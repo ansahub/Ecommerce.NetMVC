@@ -1,0 +1,68 @@
+﻿@page
+@model ECommerce.Web.Pages.CartDetailModel
+@{
+}
+
+
+
+<h1>CART DETAIL</h1>
+
+<a class="btn btn-info" aria-current="page" href="/ItemList">Back To Items</a>
+<a class="btn btn-danger" aria-current="page" href="/FinalPage">Checkout</a>
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Item Id
+                </th>
+                <th>
+                    Item name
+                </th>
+                <th>
+                    Item price
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Products)
+            {
+                if (Model.Products.Count != 0)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductPrice) SEK
+                        </td>
+                        <td>
+                            <form method="post">
+                                <button type="submit" class="btn btn-danger" asp-page="CartDetail" asp-route-ID="@item.ProductId"><i class="far fa-trash-alt"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    @Model.Products.Count();
+                    <h2>
+                        No Item found!
+                    </h2>
+                }
+            }
+
+        </tbody>
+    </table>
+
+    <h5>Total Items: @Model.Products.Count()</h5>
+    <h5>Total price: @Model.TotalPrice SEK</h5>
+
+</div>

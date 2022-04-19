@@ -1,0 +1,18 @@
+﻿Check if user is Admin -> condition. 
+If normal user dont display categorylist link thus not see Add category (html)
+Condition also in the Controller otherwise user can write url to reach the page
+
+So to be able to create category I need to login with Admin user 
+
+Admin
+Ansari Admin123!
+
+Användare 1
+user@one.com User1!
+
+Användare 2
+user@two.com User2!
+
+TODO✓ 
+Items in Cart table should be deleted and moved to Order Table     
+Check normal user need to access a page, and fix error page

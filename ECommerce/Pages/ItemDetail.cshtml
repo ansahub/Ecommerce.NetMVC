@@ -1,0 +1,59 @@
+﻿@page
+@model ECommerce.Web.Pages.ItemDetailModel
+@{
+}
+
+
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Item Id
+                </th>
+                <th>
+                    Item name
+                </th>
+                <th>
+                    Item price
+                </th>
+                <th>
+                    Category Id
+                </th>
+                <th>
+                    Category Name
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <input type="hidden" asp-for="@Model.Item.ProductId" class="form-control" />
+                    @Html.DisplayFor(modelItem => Model.Item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Item.ProductPrice) SEK
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Category.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Category.CategoryName)
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-success" onclick="javascript:clickCart()"><i class="fas fa-shopping-cart"></i></button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</form>
+
+<a class="btn btn-primary" aria-current="page" href="/ItemList">Go back to item list</a>
+
+<script src="~/js/Default.js"></script>

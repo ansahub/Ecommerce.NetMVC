@@ -1,0 +1,44 @@
+﻿@page
+@model ECommerce.Web.Pages.ProductListModel
+@{
+}
+
+<a class="btn btn-primary" aria-current="page" href="/AddProduct">Add Product</a>
+
+<a class="btn btn-primary" aria-current="page" href="/CategoryList">CHOOSE ONE OF THE CATEOGORIES</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Product ID
+            </th>
+            <th>
+                Product name
+            </th>
+            <th>
+                Product price
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                
+
+            </tr>
+        }
+    </tbody>
+</table>

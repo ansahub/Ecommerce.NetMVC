@@ -1,0 +1,40 @@
+﻿@page
+@model ECommerce.Web.Pages.CategoryListModel
+@{
+}
+
+
+
+<a class="btn btn-primary" aria-current="page" href="/AddCategory">Add Category</a>
+<a class="btn btn-primary" aria-current="page" href="/ItemList">See all items</a>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Category ID
+            </th>
+            <th>
+                Category name
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.Categories)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
